@@ -17,15 +17,13 @@ class IcsController < ApplicationController
       respond_to do |format|
         format.ics do
           calendar =
-              Rails.cache.fetch ['ics', 'v1', user, @courses] do
-                cal = RiCal.Calendar
+              cal = RiCal.Calendar
 
-                @courses.each do |course|
-                  cal.add_subcomponent course.to_ical_event
-                end
-
-                cal.to_s.gsub!(/\n/, "\r\n")
+              @courses.each do |course|
+                cal.add_subcomponent course.to_ical_event
               end
+
+              cal.to_s.gsub!(/\n/, "\r\n")
 
           render :text => calendar, :content_type => 'text/calendar'
         end
