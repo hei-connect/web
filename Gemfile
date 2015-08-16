@@ -6,7 +6,7 @@ ruby '2.1.4'
 gem 'rails'
 gem 'rack'
 gem 'puma'
-gem 'rack-timeout'
+gem 'rack-timeout', '0.0.4'
 
 gem 'coffee-rails'
 gem 'sass-rails'

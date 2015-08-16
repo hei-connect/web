@@ -439,7 +439,7 @@ DEPENDENCIES
   puma
   quiet_assets
   rack
-  rack-timeout
+  rack-timeout (= 0.0.4)
   rails
   rails_12factor
   redcarpet
