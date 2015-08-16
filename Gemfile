@@ -44,7 +44,7 @@ group :test do
   gem 'launchy'
   gem 'coveralls'
   gem 'database_cleaner'
-  gem 'poltergeist'
+  gem 'poltergeist', '1.5.1'
 end
 
 group :production do

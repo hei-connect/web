@@ -434,7 +434,7 @@ DEPENDENCIES
   minitest
   newrelic_rpm
   pg
-  poltergeist
+  poltergeist (= 1.5.1)
   protected_attributes
   puma
   quiet_assets
