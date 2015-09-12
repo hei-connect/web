@@ -61,7 +61,7 @@ HeiConnectWeb::Application.configure do
 
   config.eager_load = true
 
-  config.log_level = :debug
+  config.log_level = :info
 
   # Emails configuration
   config.action_mailer.delivery_method = :smtp

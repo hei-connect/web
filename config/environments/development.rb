@@ -38,6 +38,6 @@ HeiConnectWeb::Application.configure do
     Bullet.rails_logger = true
   end
 
-  config.log_level = :info
+  config.log_level = :debug
 
 end
