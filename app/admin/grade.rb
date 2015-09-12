@@ -29,6 +29,7 @@ ActiveAdmin.register Grade do
     column 'User Session' do |grade|
       link_to grade.user_session.title, admin_user_session_path(grade.user_session)
     end
-    default_actions
+
+    actions
   end
 end

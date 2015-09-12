@@ -23,7 +23,7 @@ ActiveAdmin.register Feature do
     end
     column :updated_at
 
-    default_actions
+    actions
   end
 
   member_action :toggle, :method => :post do

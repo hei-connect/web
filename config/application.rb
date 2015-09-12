@@ -84,5 +84,7 @@ module HeiConnectWeb
     # If you want to use the new JSON-based format in your application, you can add an initializer file with the following content:
     config.action_dispatch.cookies_serializer = :hybrid
 
+    config.active_job.queue_adapter = :delayed_job
+
   end
 end

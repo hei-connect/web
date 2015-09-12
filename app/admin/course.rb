@@ -34,6 +34,7 @@ ActiveAdmin.register Course do
     column :broken_name
     column :length
     column :date
-    default_actions
+
+    actions
   end
 end
