@@ -4662,6 +4662,17 @@ a.thumbnail.active {
 .alert-info .alert-link {
   color: #d2d2d2;
 }
+.alert-notice {
+  background-color: #5bc0de;
+  border-color: transparent;
+  color: #ebebeb;
+}
+.alert-notice hr {
+  border-top-color: rgba(0, 0, 0, 0);
+}
+.alert-notice .alert-link {
+  color: #d2d2d2;
+}
 .alert-warning {
   background-color: #f0ad4e;
   border-color: transparent;
