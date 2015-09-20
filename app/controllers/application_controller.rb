@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   end
 
   def check_ecampus_suffix
-    if current_user.ecampus_id != params[:ecampus_id]
+    if params[:ecampus_id] && current_user.ecampus_id != params[:ecampus_id]
       redirect_to dashboard_url ecampus_id: current_user.ecampus_id
     end
   end

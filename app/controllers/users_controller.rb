@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_filter :require_login, only: :validate
 
   def create
+    fail!
     params[:user][:ecampus_id].downcase! if params[:user][:ecampus_id]
     @user = User.new(params[:user])
 

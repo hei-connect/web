@@ -4,12 +4,28 @@ HeiConnectWeb::Application.routes.draw do
 
   get 'ics/:key' => 'ics#show', as: :ics
 
+<<<<<<< Updated upstream
   get 'dashboard/:ecampus_id' => 'dashboard#index', as: :dashboard
   get 'dashboard/:ecampus_id/courses' => 'dashboard#courses', as: :dashboard_courses
   get 'dashboard/:ecampus_id/grades/:year/:try' => 'dashboard#grades', as: :dashboard_grades
   put 'dashboard/:ecampus_id/grades/:year/:try' => 'dashboard#update_grades'
   get 'dashboard/:ecampus_id/absences/:year/:try' => 'dashboard#absences', as: :dashboard_absences
   put 'dashboard/:ecampus_id/absences/:year/:try' => 'dashboard#update_absences'
+=======
+
+  namespace :dashboard do
+    resource :users, only: [:show]
+  end
+
+  scope '/dashboard/:ecampus_id' do
+    get '' => 'dashboard#index', as: :dashboard
+    get 'courses' => 'dashboard#courses', as: :dashboard_courses
+    get 'grades/:year/:try' => 'dashboard#grades', as: :dashboard_grades
+    put 'grades/:year/:try' => 'dashboard#update_grades'
+    get 'absences/:year/:try' => 'dashboard#absences', as: :dashboard_absences
+    put 'absences/:year/:try' => 'dashboard#update_absences'
+  end
+>>>>>>> Stashed changes
 
   resource :sessions, only: [:destroy]
   # Should be improved
