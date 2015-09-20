@@ -4,13 +4,13 @@ HeiConnectWeb::Application.routes.draw do
 
   get 'ics/:key' => 'ics#show', as: :ics
 
-  scope '/dashboard' do
-    get ':ecampus_id' => 'dashboard#index', as: :dashboard
-    get ':ecampus_id/courses' => 'dashboard#courses', as: :dashboard_courses
-    get ':ecampus_id/grades/:year/:try' => 'dashboard#grades', as: :dashboard_grades
-    put ':ecampus_id/grades/:year/:try' => 'dashboard#update_grades'
-    get ':ecampus_id/absences/:year/:try' => 'dashboard#absences', as: :dashboard_absences
-    put ':ecampus_id/absences/:year/:try' => 'dashboard#update_absences'
+  scope '/dashboard/:ecampus_id' do
+    get '' => 'dashboard#index', as: :dashboard
+    get 'courses' => 'dashboard#courses', as: :dashboard_courses
+    get 'grades/:year/:try' => 'dashboard#grades', as: :dashboard_grades
+    put 'grades/:year/:try' => 'dashboard#update_grades'
+    get 'absences/:year/:try' => 'dashboard#absences', as: :dashboard_absences
+    put 'absences/:year/:try' => 'dashboard#update_absences'
   end
 
   resource :sessions, only: [:destroy]
