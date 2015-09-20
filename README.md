@@ -1,9 +1,9 @@
 HEI Connect Web
 =========
 
-[![Code Climate](https://codeclimate.com/github/ldavin/hei-connect-web.png)](https://codeclimate.com/github/ldavin/hei-connect-web)
-[![Coverage Status](https://coveralls.io/repos/ldavin/hei-connect-web/badge.png)](https://coveralls.io/r/ldavin/hei-connect-web)
-[![Build Status](https://travis-ci.org/ldavin/hei-connect-web.png?branch=master)](https://travis-ci.org/ldavin/hei-connect-web)
+[![Code Climate](https://codeclimate.com/github/hei-connect/web/badges/gpa.svg)](https://codeclimate.com/github/hei-connect/web)
+[![Coverage Status](https://coveralls.io/repos/hei-connect/web/badge.svg?branch=master&service=github)](https://coveralls.io/github/hei-connect/web?branch=master)
+[![Build Status](https://travis-ci.org/hei-connect/web.svg)](https://travis-ci.org/hei-connect/web)
 [![PullReview stats](https://www.pullreview.com/github/ldavin/hei-connect-web/badges/master.svg?)](https://www.pullreview.com/github/ldavin/hei-connect-web/reviews/master)
 [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/StanBoyet/hei-connect)
 

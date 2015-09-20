@@ -28,7 +28,8 @@ ActiveAdmin.register Update do
     column :state
     column :rev
     column :updated_at
-    default_actions
+
+    actions
   end
 
 end

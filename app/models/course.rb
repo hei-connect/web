@@ -42,30 +42,26 @@ class Course < ActiveRecord::Base
   scope :tomorrow, -> { where("date(date) = DATE(?)", Time.zone.today + 1).order("date ASC") }
 
   def to_ical_event
-    Rails.cache.fetch [self, 'ical_event'] do
-      event = RiCal.Event
-      event.dtstart = self.date
-      event.dtend = self.date + self.length.minutes
-      event.summary = self.name
-      event.description = self.description
-      event.location = self.place
-      event.created = self.created_at.to_datetime
-      event.last_modified = self.updated_at.to_datetime
+    event = RiCal.Event
+    event.dtstart = self.date
+    event.dtend = self.date + self.length.minutes
+    event.summary = self.name
+    event.description = self.description
+    event.location = self.place
+    event.created = self.created_at.to_datetime
+    event.last_modified = self.updated_at.to_datetime
 
-      event
-    end
+    event
   end
 
   def to_fullcalendar_event
-    Rails.cache.fetch [self, 'full_calendar_event'] do
-      {
-          id: self.id,
-          title: "#{name}, #{place}",
-          start: self.date,
-          end: self.date + self.length.minutes,
-          allDay: false
-      }
-    end
+    {
+        id: self.id,
+        title: "#{name}, #{place}",
+        start: self.date,
+        end: self.date + self.length.minutes,
+        allDay: false
+    }
   end
 
   def name

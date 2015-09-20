@@ -28,6 +28,7 @@ ActiveAdmin.register Exam do
     column :average
     column :grades_count
     column :date
-    default_actions
+
+    actions
   end
 end

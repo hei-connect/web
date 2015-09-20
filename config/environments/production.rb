@@ -9,7 +9,7 @@ HeiConnectWeb::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_files = false
 
   # Compress JavaScripts and CSS
   config.assets.js_compressor = :uglifier
@@ -39,10 +39,6 @@ HeiConnectWeb::Application.configure do
   # Use a different logger for distributed setups
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
-  # Use a different cache store in production
-  # FIXME for heroku !
-  config.cache_store = :dalli_store, { namespace: 'cache', compress: true } if ENV['WEB_SERVER'] == "true"
-
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
 
@@ -54,7 +50,6 @@ HeiConnectWeb::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Enable threaded mode
-  config.threadsafe!
   config.dependency_loading = true if $rails_rake_task
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
@@ -65,6 +60,8 @@ HeiConnectWeb::Application.configure do
   config.active_support.deprecation = :notify
 
   config.eager_load = true
+
+  config.log_level = :info
 
   # Emails configuration
   config.action_mailer.delivery_method = :smtp

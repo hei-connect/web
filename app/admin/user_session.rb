@@ -28,6 +28,7 @@ ActiveAdmin.register UserSession do
     column :grades_session
     column :update_number
     column :updated_at
-    default_actions
+
+    actions
   end
 end
